@@ -1,0 +1,26 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        
+        if(x == 0)  //base case if 0
+        return true;
+       
+        if(x < 0 || x % 10 == 0) //case if negative or divisable by 10 
+        return false;
+
+        int reversed = 0;  //setting variables
+        int temp = x;
+
+        while(x > reversed){  
+            int pop = x % 10;    //stores last digit in pop  
+            x= x/10;    //removes last digit
+
+            reversed = (reversed * 10) + pop; //reversed integer until you get to halfway point
+        }  
+
+        if( x== reversed || x == reversed / 10) //comparison and case if number is odd
+        return true;
+
+        else
+         return false;
+    }
+}
