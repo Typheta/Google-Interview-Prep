@@ -6,7 +6,7 @@ class Solution {
         String end = strs[strs.length - 1];
         int index = 0;
 
-       while(index < strs.length){
+       while(index < start.length() &&  index < end.length()){
             if(start.charAt(index) == end.charAt(index))
                 index++;
 
